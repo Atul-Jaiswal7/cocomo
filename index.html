@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COCOMO Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<table>
+  <tr>
+    <th colspan="2">Project Type</th>
+    <td colspan="3">
+      <select id="type" onchange="updateConstants()">
+        <option value="organic">Organic</option>
+        <option value="semi">Semi-detached</option>
+        <option value="embedded">Embedded</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">a</td><td colspan="3"><input id="a" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2">b</td><td colspan="3"><input id="b" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2">c</td><td colspan="3"><input id="c" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2">Project size (in KDSI)</td>
+    <td colspan="3"><input id="size" type="number"></td>
+  </tr>
+  <tr>
+    <td colspan="2">Effort (in PM)</td>
+    <td colspan="3"><input id="effort" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2">T<sub>dev</sub> (in month)</td>
+    <td colspan="3"><input id="time" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2">Effort Adjustment Factor (EAF)</td>
+    <td colspan="3"><input id="eaf" type="number" step="0.01"></td>
+  </tr>
+  <tr>
+    <td colspan="2">Effort<sub>corrected</sub> (in PM)</td>
+    <td colspan="3"><input id="effortC" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2">T<sub>dev corrected</sub> (in month)</td>
+    <td colspan="3"><input id="timeC" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="2"># of developers</td>
+    <td colspan="3"><input id="developers" disabled></td>
+  </tr>
+  <tr>
+    <td colspan="5"><button onclick="calculate()">Calculate</button></td>
+  </tr>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
